@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .nav-link-container {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+        padding: 0px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-link-container a {
+        text-decoration: none;
+        color: black;
+      }
+      .nav-link-container a:hover {
+        color: skyblue;
+      }
+      .header-link-container {
+        display: flex;
+        gap: 100px;
+        margin-right: 50px;
+      }
+    </style>
+    {% block head_content %} {% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-link-container">
+          {% block content %} {% endblock %}
+          <div class="header-link-container">
+            <li><a href="/sign-up"> Sign Up</a></li>
+            <li><a href="/log-in"> Log In</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
